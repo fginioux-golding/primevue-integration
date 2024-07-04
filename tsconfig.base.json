@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@primevue-integration/themes-preset": ["packages/libs/themes-preset/src/index.ts"]
+      "@primevue-integration/themes-preset": [
+        "packages/libs/themes-preset/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
