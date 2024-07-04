@@ -29,7 +29,7 @@ jobs:
           cache: 'npm'
       - run: echo ${{ github.head_commit.author.email }} ${{ github.head_commit.author.name }}
       - run: |
-        git config --global user.name 'Frederic Ginioux' \
-        git config --global user.email 'Ginioux@goldingcapital.com'
+          git config --global user.name 'Frederic Ginioux' \
+          git config --global user.email 'Ginioux@goldingcapital.com'
       - run: npm install --include=optional
       - run: npm run preset:ci
