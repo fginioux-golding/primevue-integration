@@ -22,7 +22,7 @@ if (existsSync(__targetDir)) {
   });
 
   const msg = execSync(`git log -1 --oneline`).toString();
-  console.log(msg.split(' ')[0])
+  console.log(msg.split(' ')[0].length)
   if (msg === 'chore: ci-update preset file generation') {
 
   } else {
