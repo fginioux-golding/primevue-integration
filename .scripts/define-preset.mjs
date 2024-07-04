@@ -34,5 +34,7 @@ if (existsSync(__targetDir)) {
   // execSync(`npx nx format:write --skip-nx-cache`);
   execSync(`git add ${filePath}`);
   execSync(`git commit -am "chore: ci-update preset file generation"`);
-  execSync(`git push origin ${execSync('git rev-parse --abbrev-ref HEAD').toString()}`);
+  execSync(
+    `git push origin ${execSync('git rev-parse --abbrev-ref HEAD').toString()}`
+  );
 }
