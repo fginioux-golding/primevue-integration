@@ -21,13 +21,15 @@ if (existsSync(__targetDir)) {
     encoding: 'utf-8',
   });
 
-  const msg = execSync(`git log -1 --oneline`).toString();
-  console.log(execSync(`git branch --show-current`).toString().trim());
+  const [ commit, msg ] = execSync(`git log -1 --oneline`).toString().split();
+  console.log(commit, msg);
   if (msg === 'chore: ci-update preset file generation') {
-    //execSync(`git checkout ${msg.split(' ')[0]}`);
-    //execSync(`git add . && git commit --amend --no-edit`);
+    const [ commit ] = msg.split(' ');
+    execSync(`git checkout ${msg.split(' ')[0]}`);
+    execSync(`git add . && git commit --amend --no-edit`);
     const branch = execSync(`git branch --show-current`).toString().trim();
-    console.log(branch);
+    execSync(`git checkout ${branch}`);
+    execSync(`git rebase --onto @{-1} ${commit}`);
   } else {
     execSync(`git add ${filePath}`);
     execSync(`git commit -am "chore: ci-update preset file generation"`);
