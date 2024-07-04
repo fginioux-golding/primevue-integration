@@ -22,8 +22,12 @@ if (existsSync(__targetDir)) {
   });
 
   const msg = execSync(`git log -1 --oneline`).toString();
-  if (msg.includes('chore(CI)')) {
+  console.log(msg.split(' ')[0])
+  if (msg === 'chore: ci-update preset file generation') {
 
+  } else {
+    execSync(`git add ${filePath}`);
+    execSync(`git commit -am "chore: ci-update preset file generation"`);
   }
 
   // execSync(`npx nx format:write --write ${filePath}`);
