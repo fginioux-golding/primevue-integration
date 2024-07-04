@@ -1,5 +1,5 @@
 import path from 'path';
-import { exec, execSync } from 'child_process';
+import { exec, execFile, execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 
@@ -22,9 +22,11 @@ if (existsSync(__targetDir)) {
   });
 
   const msg = execSync(`git log -1 --oneline`).toString();
-  console.log(msg.split(' ')[0].length)
   if (msg === 'chore: ci-update preset file generation') {
-
+    //execSync(`git checkout ${msg.split(' ')[0]}`);
+    //execSync(`git add . && git commit --amend --no-edit`);
+    const branch = execSync(`git branch --show-current`).toString().trim();
+    console.log(branch);
   } else {
     execSync(`git add ${filePath}`);
     execSync(`git commit -am "chore: ci-update preset file generation"`);
