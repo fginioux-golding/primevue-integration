@@ -24,8 +24,7 @@ if (existsSync(__targetDir)) {
   const [ commit, msg ] = execSync(`git log -1 --oneline`).toString().split();
   console.log(commit, msg);
   if (msg === 'chore: ci-update preset file generation') {
-    const [ commit ] = msg.split(' ');
-    execSync(`git checkout ${msg.split(' ')[0]}`);
+    execSync(`git checkout ${commit}`);
     execSync(`git add . && git commit --amend --no-edit`);
     const branch = execSync(`git branch --show-current`).toString().trim();
     execSync(`git checkout ${branch}`);
