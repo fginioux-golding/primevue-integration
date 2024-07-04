@@ -22,6 +22,7 @@ if (existsSync(__targetDir)) {
   });
 
   const msg = execSync(`git log -1 --oneline`).toString();
+  console.log(execSync(`git branch --show-current`).toString().trim());
   if (msg === 'chore: ci-update preset file generation') {
     //execSync(`git checkout ${msg.split(' ')[0]}`);
     //execSync(`git add . && git commit --amend --no-edit`);
