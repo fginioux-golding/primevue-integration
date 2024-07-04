@@ -1,1 +1,7 @@
-{}
+{
+  "primitive": {
+    "borderRadius": {
+      "none": "0"
+    }
+  }
+}
