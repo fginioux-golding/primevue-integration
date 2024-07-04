@@ -7,6 +7,13 @@
       "lg": "0.5rem",
       "xl": "1rem",
       "full": "9999px"
+    },
+    "borderWidth": {
+      "none": "0",
+      "sm": "1px",
+      "md": "2px",
+      "lg": "4px",
+      "xl": "8px"
     }
   }
 }

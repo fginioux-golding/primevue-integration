@@ -1,5 +1,5 @@
 import path from 'path';
-import { exec, execFile, execSync } from 'child_process';
+import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 
@@ -34,4 +34,5 @@ if (existsSync(__targetDir)) {
   // execSync(`npx nx format:write --skip-nx-cache`);
   execSync(`git add ${filePath}`);
   execSync(`git commit -am "chore: ci-update preset file generation"`);
+  execSync(`git push origin ${execSync('git rev-parse --abbrev-ref HEAD').toString()}`);
 }
