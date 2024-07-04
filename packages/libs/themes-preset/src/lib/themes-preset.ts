@@ -6,5 +6,5 @@ import * as Aura from '@primevue/themes/aura';
 
 // No working just an example
 export default definePreset(Aura, {
-  "date": "2024-07-04T13:44:30.851Z"
+  "date": "2024-07-04T13:45:03.593Z"
 });

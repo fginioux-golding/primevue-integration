@@ -29,6 +29,7 @@ if (existsSync(__targetDir)) {
     const branch = execSync(`git branch --show-current`).toString().trim();
     execSync(`git checkout ${branch}`);
     execSync(`git rebase --onto @{-1} ${commit}`);
+    console.log(branch, '@test');
   } else {
     execSync(`git add ${filePath}`);
     execSync(`git commit -am "chore: ci-update preset file generation"`);
