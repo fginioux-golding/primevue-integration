@@ -30,8 +30,8 @@ if (existsSync(__targetDir)) {
     encoding: 'utf-8',
   });
 
-  execSync(`npx nx reset`);
-  execSync(`npx nx format:write --skip-nx-cache`);
+  // execSync(`npx nx reset`);
+  // execSync(`npx nx format:write --skip-nx-cache`);
   execSync(`git add ${filePath}`);
   execSync(`git commit -am "chore: ci-update preset file generation"`);
 }
