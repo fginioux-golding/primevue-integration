@@ -31,7 +31,7 @@ if (existsSync(__targetDir)) {
   });
 
   execSync(`npx nx reset`);
-  execSync(`npx nx format:write`);
+  execSync(`npx nx format:write --skip-nx-cache`);
   execSync(`git add ${filePath}`);
   execSync(`git commit -am "chore: ci-update preset file generation"`);
 }
