@@ -23,6 +23,13 @@
       "info": "#3182ce",
       "warning": "#d97706",
       "danger": "#e53e3e"
+    },
+    "borderStyle": {
+      "none": "none",
+      "solid": "solid",
+      "dashed": "dashed",
+      "dotted": "dotted",
+      "double": "double"
     }
   }
 }
