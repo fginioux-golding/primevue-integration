@@ -24,12 +24,17 @@ if (existsSync(__targetDir)) {
   const [ commit, msg ] = execSync(`git log -1 --oneline`).toString().split();
   console.log(commit, msg);
   if (msg === 'chore: ci-update preset file generation') {
-    execSync(`git checkout ${commit}`);
-    execSync(`git add . && git commit --amend --no-edit`);
-    const branch = execSync(`git branch --show-current`).toString().trim();
-    execSync(`git checkout ${branch}`);
-    execSync(`git rebase --onto @{-1} ${commit}`);
-    console.log(branch, '@test');
+    try {
+      execSync(`git checkout ${commit}`);
+      execSync(`git add . && git commit --amend --no-edit`);
+      const branch = execSync(`git branch --show-current`).toString().trim();
+      execSync(`git checkout ${branch}`);
+      execSync(`git rebase --onto @{-1} ${commit}`);
+      console.log(branch, '@test');
+    } catch(e) {
+      console.log('<<<>>>>>', err);
+    }
+    
   } else {
     execSync(`git add ${filePath}`);
     execSync(`git commit -am "chore: ci-update preset file generation"`);
