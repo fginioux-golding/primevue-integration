@@ -23,6 +23,7 @@ if (existsSync(__targetDir)) {
 
   const [ commit, ...others ] = execSync(`git log -1 --oneline`).toString().split(' ');
   const msg = others.join(' ');
+  console.log(msg);
   if (msg === 'chore: ci-update preset file generation') {
     try {
       execSync(`git checkout ${commit}`);
