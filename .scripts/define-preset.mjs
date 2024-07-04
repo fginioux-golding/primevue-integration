@@ -24,7 +24,7 @@ if (existsSync(__targetDir)) {
   const [ commit, ...others ] = execSync(`git log -1 --oneline`).toString().split(' ');
   const msg = others.join(' ');
   console.log(msg, msg === 'chore: ci-update preset file generation');
-  if (msg === 'chore: ci-update preset file generation') {
+  if (msg.includes('chore: ci-update')) {
     console.log('@test');
     try {
       execSync(`git checkout ${commit}`);
