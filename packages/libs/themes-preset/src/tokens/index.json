@@ -1,1 +1,28 @@
-{}
+{
+  "primitive": {
+    "borderRadius": {
+      "none": "0",
+      "sm": "0.125rem",
+      "md": "0.25rem",
+      "lg": "0.5rem",
+      "xl": "1rem",
+      "full": "9999px"
+    },
+    "borderWidth": {
+      "none": "0",
+      "sm": "1px",
+      "md": "2px",
+      "lg": "4px",
+      "xl": "8px"
+    },
+    "borderColor": {
+      "default": "#e2e8f0",
+      "primary": "#3182ce",
+      "secondary": "#2d3748",
+      "success": "#38a169",
+      "info": "#3182ce",
+      "warning": "#d97706",
+      "danger": "#e53e3e"
+    }
+  }
+}
