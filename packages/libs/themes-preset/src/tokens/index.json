@@ -2,7 +2,8 @@
   "primitive": {
     "borderRadius": {
       "none": "0",
-      "sm": "0.125rem"
+      "sm": "0.125rem",
+      "md": "0.25rem"
     }
   }
 }
