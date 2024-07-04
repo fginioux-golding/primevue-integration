@@ -5,6 +5,4 @@ import { definePreset } from '@primevue/themes';
 import * as Aura from '@primevue/themes/aura';
 
 // No working just an example
-export default definePreset(Aura, {
-  "date": "2024-07-04T13:27:16.009Z"
-});
+export default definePreset(Aura, %{replacement}%);
