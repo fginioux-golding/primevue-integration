@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - run: echo "${ github.head_commit.author.email } ${ github.head_commit.author.name }"
+      - run: echo "${{ github.event.commits[0].author.name }} ${{ github.event.commits[0].author.email }}"
       - run: git config --global user.name 'Frederic Ginioux'
       - run: git config --global user.email 'Ginioux@goldingcapital.com'
       - run: npm install --include=optional
