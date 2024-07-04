@@ -1,0 +1,19 @@
+{
+  "name": "themes-preset",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/libs/themes-preset/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/libs/themes-preset",
+        "main": "packages/libs/themes-preset/src/index.ts",
+        "tsConfig": "packages/libs/themes-preset/tsconfig.lib.json",
+        "assets": ["packages/libs/themes-preset/*.md"]
+      }
+    }
+  }
+}
