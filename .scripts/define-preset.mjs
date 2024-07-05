@@ -39,8 +39,8 @@ if (existsSync(__targetDir)) {
   execSync(`npx nx reset`);
   console.log('nx command reset...');
   execSync(`git add ${filePath}`);
-  execSync(`git commit -am "chore: ci-update preset file generation"`);
+  execSync(`git commit -am "chore: ci-update preset file generation" --no-verify`);
   execSync(
-    `git push origin ${branch} --no-verify`
+    `git push origin ${branch}`
   );
 }

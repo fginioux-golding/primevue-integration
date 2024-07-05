@@ -16,7 +16,7 @@
       "xl": "8px"
     },
     "borderColor": {
-      "default": "#000000",
+      "default": "#FFFFFF",
       "primary": "#3182ce",
       "secondary": "#2d3748",
       "success": "#38a169",
