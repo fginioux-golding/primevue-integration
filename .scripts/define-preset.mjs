@@ -1,5 +1,5 @@
 import path from 'path';
-import { execSync } from 'child_process';
+import { exec, execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 
@@ -32,9 +32,15 @@ if (existsSync(__targetDir)) {
 
   // execSync(`npx nx reset`);
   // execSync(`npx nx format:write --skip-nx-cache`);
+  // nx format:write --projects=themes-preset --base=${branch} --skip-nx-cache
+  // nx format:write --projects=themes-preset --base=feature/GAD-00_change-preset --skip-nx-cache
+  const branch = execSync('git rev-parse --abbrev-ref HEAD').toString();
+  console.log(branch, '@branch');
+  execSync(`npx nx reset`);
+  console.log('nx command reset...');
   execSync(`git add ${filePath}`);
   execSync(`git commit -am "chore: ci-update preset file generation"`);
   execSync(
-    `git push origin ${execSync('git rev-parse --abbrev-ref HEAD').toString()}`
+    `git push origin ${branch} --no-verify`
   );
 }
