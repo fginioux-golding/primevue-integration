@@ -22,7 +22,14 @@
       "success": "#38a169",
       "info": "#3182ce",
       "warning": "#d97706",
-      "danger": "#000FFF"
+      "danger": "#FFF000"
+    },
+    "borderStyle": {
+      "none": "none",
+      "solid": "solid",
+      "dashed": "dashed",
+      "dotted": "dotted",
+      "double": "double"
     }
   }
 }
