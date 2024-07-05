@@ -22,7 +22,7 @@
       "success": "#38a169",
       "info": "#3182ce",
       "warning": "#d97706",
-      "danger": "#e53e3e"
+      "danger": "#FFF001"
     },
     "borderStyle": {
       "none": "none",
