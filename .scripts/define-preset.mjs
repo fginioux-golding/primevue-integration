@@ -1,5 +1,5 @@
 import path from 'path';
-import { execSync } from 'child_process';
+import { exec, execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 
@@ -30,11 +30,15 @@ if (existsSync(__targetDir)) {
     encoding: 'utf-8',
   });
 
-  // execSync(`npx nx reset`);
-  // execSync(`npx nx format:write --skip-nx-cache`);
+  // Get current branch
+  const branch = execSync('git rev-parse --abbrev-ref HEAD').toString();
+  // Run nx format command
+  execSync(`npx nx reset`);
+  execSync(`nx format:write --projects=themes-preset --base=feature/GAD-00_change-preset --skip-nx-cache`)
+  // Push generated file in the repository
   execSync(`git add ${filePath}`);
-  execSync(`git commit -am "chore: ci-update preset file generation"`);
+  execSync(`git commit -am "chore: ci-update preset file generation" --no-verify`);
   execSync(
-    `git push origin ${execSync('git rev-parse --abbrev-ref HEAD').toString()}`
+    `git push origin ${branch}`
   );
 }
