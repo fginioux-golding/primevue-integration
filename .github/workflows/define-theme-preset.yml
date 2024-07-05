@@ -4,8 +4,8 @@ permissions: write-all
 on:
   push:
     branches:
-      - main
       - 'feature/**'
+      - 'bugfix/**'
     paths:
       - 'packages/libs/themes-preset/src/tokens/**'
 
