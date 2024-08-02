@@ -1,0 +1,94 @@
+{
+  "brand": {
+    "colors": {
+      "goldingBlue": {
+        "value": "#00378e",
+        "type": "color"
+      },
+      "horizonBlue": {
+        "value": "#2180F2",
+        "type": "color"
+      },
+      "meadowGreen": {
+        "value": "#97b93a",
+        "type": "color"
+      },
+      "skyBlue": {
+        "900": {
+          "value": "#86c3ff",
+          "type": "color"
+        }
+      },
+      "springGreen": {
+        "900": {
+          "value": "#c9e874",
+          "type": "color"
+        }
+      }
+    },
+    "primary": {
+      "color": {
+        "value": "{brand.colors.goldingBlue}",
+        "type": "color"
+      }
+    },
+    "secondary": {
+      "first": {
+        "color": {
+          "value": "{brand.colors.horizonBlue}",
+          "type": "color"
+        }
+      },
+      "second": {
+        "color": {
+          "value": "{brand.colors.meadowGreen}",
+          "type": "color"
+        }
+      }
+    },
+    "accent": {
+      "first": {
+        "color": {
+          "900": {
+            "value": "{brand.colors.skyBlue.900}",
+            "type": "color"
+          }
+        }
+      },
+      "second": {
+        "color": {
+          "900": {
+            "value": "{brand.colors.springGreen.900}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
+  "theme": {
+    "primary": {
+      "color": {
+        "value": "{brand.primary.color}",
+        "type": "color"
+      }
+    },
+    "dark": {
+      "color": {
+        "value": "{brand.secondary.first.color}",
+        "type": "color"
+      }
+    },
+    "light": {
+      "color": {
+        "value": "{brand.accent.first.color.900}",
+        "type": "color"
+      }
+    },
+    "slot": {
+      "color": {
+        "value": "#ea00ff",
+        "type": "color"
+      }
+    }
+  }
+}
