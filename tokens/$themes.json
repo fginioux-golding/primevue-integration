@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ddaee9d8271cd7dd816c5a39c58e5dc99501205d",
+    "name": "golding-light",
+    "$figmaStyleReferences": {
+      "brand.colors.goldingBlue": "S:8615606c293f5071625a55012f4f375a179d3984,",
+      "brand.colors.horizonBlue": "S:b8d33783e80fbec1f405e944df4a81c280772bdd,",
+      "brand.colors.meadowGreen": "S:ab1178764a3f83cb589ca270e617dfd66311c3c7,",
+      "brand.colors.skyBlue.900": "S:32654a03c1b5a9d6d6c47e537b91c3eb606bc253,",
+      "brand.colors.springGreen.900": "S:8cfed131448e050db37e2b82047c14d0bc76172b,",
+      "brand.primary.color": "S:41d6335f78f1507efd16a36394eccb1aaaa36f82,",
+      "brand.secondary.first.color": "S:937faa3b9593d78a7b41986b0460ebdb5d0eaf01,",
+      "brand.secondary.second.color": "S:ef51a1c0f83cf0d82501d31e00f238e8ce15bc5a,",
+      "brand.accent.first.color.900": "S:5d077703b709da17eed01573340b9658aa2cf6b6,",
+      "brand.accent.second.color.900": "S:fe65c0c42fa90b5652d5afa9ac4b7223d7293510,",
+      "theme.primary.color": "S:d4a696d8bc95ebb33b93fe6d828836d899cb8266,",
+      "theme.dark.color": "S:5399adb4a3bbb16ffcdd9670edc66f3efa162a2d,",
+      "theme.light.color": "S:7eef5e411b4f68b2938c5c5410df834d4a05d792,",
+      "theme.slot.color": "S:34d7dea4e85a77bd2a95bb27ffb58824d35d59fc,"
+    },
+    "selectedTokenSets": {
+      "lara-light": "source",
+      "golding-light": "enabled"
+    },
+    "group": "golding"
+  },
+  {
+    "id": "a073d2d4091526489c63127390fd8087916c9499",
+    "name": "golding-dark",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "lara-dark": "source",
+      "golding-dark": "enabled"
+    },
+    "group": "golding"
+  }
+]
